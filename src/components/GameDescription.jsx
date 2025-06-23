@@ -329,7 +329,7 @@ const GameDescription = () => {
             {/* Right Column: Image */}
             <div className="md:w-1/2 w-full mt-8 md:mt-0 pr-15">
               <img
-                src="/Gameimages/main_poster.png"
+                src={`${import.meta.env.BASE_URL}Gameimages/main_poster.png`}
                 alt="Stardew Valley"
                 className="rounded-xl w-full"
               />
@@ -836,7 +836,7 @@ const GameDescription = () => {
               <div className="w-2/3 text-base text-[#484848] flex items-start gap-4">
                 <a href="https://www.esrb.org/ratings-guide/">
                   <img
-                    src="/esrb.jpg"
+                    src={`${import.meta.env.BASE_URL}esrb.jpg`}
                     alt="ESRB Rating"
                     className="w-12 h-16"
                   />
@@ -938,7 +938,9 @@ const GameDescription = () => {
                   >
                     <div className="overflow-hidden rounded-t-lg">
                       <img
-                        src={game.imageUrl}
+                        src={`${
+                          import.meta.env.BASE_URL
+                        }${game.imageUrl.replace(/^\//, "")}`}
                         alt={game.title}
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                       />

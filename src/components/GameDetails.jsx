@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 
 const GameDetails = () => {
   const images = [
-    "/Gameimages/main_poster.png",
-    "/Gameimages/2ndthumbnail.png",
-    "/Gameimages/3rdthumbnail.png",
-    "/Gameimages/4ththumbnail.png",
-    "/Gameimages/5ththumbnail.png",
-    "/Gameimages/6ththumbnail.png",
-    "/Gameimages/7ththumbnail.png",
-    "/Gameimages/8ththumbnail.png",
+    "Gameimages/main_poster.png",
+    "Gameimages/2ndthumbnail.png",
+    "Gameimages/3rdthumbnail.png",
+    "Gameimages/4ththumbnail.png",
+    "Gameimages/5ththumbnail.png",
+    "Gameimages/6ththumbnail.png",
+    "Gameimages/7ththumbnail.png",
+    "Gameimages/8ththumbnail.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -94,7 +94,7 @@ const GameDetails = () => {
                 {images.map((image, index) => (
                   <img
                     key={index}
-                    src={image}
+                    src={`${import.meta.env.BASE_URL}${image}`}
                     alt={`Slide ${index + 1}`}
                     className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out ${
                       index === currentIndex
@@ -136,7 +136,7 @@ const GameDetails = () => {
               >
                 <div className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
                   <img
-                    src={images[currentIndex]}
+                    src={`${import.meta.env.BASE_URL}${images[currentIndex]}`}
                     alt="Zoomed view"
                     className="max-w-full max-h-[90vh] object-contain"
                   />
@@ -162,7 +162,7 @@ const GameDetails = () => {
                   onClick={() => goToSlide(slideIndex)}
                 >
                   <img
-                    src={image}
+                    src={`${import.meta.env.BASE_URL}${image}`}
                     alt={`Thumbnail ${slideIndex + 1}`}
                     className={`object-cover transition-opacity duration-200 ${
                       currentIndex === slideIndex
@@ -178,7 +178,7 @@ const GameDetails = () => {
             <div className="mt-6 flex items-center">
               <a href="https://www.esrb.org/ratings-guide/">
                 <img
-                  src="/esrb.jpg"
+                  src={`${import.meta.env.BASE_URL}esrb.jpg`}
                   alt="ESRB Everyone 10+"
                   className="h-16 w-12 mr-4"
                 />

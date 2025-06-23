@@ -354,7 +354,11 @@ const Footer = () => {
             </a>
           </div>
           <a href="https://www.esrb.org/EPCConfirm/891/" className="ml-auto">
-            <img src="/esrbcertified.png" alt="" className="h-25 w-20" />
+            <img
+              src={`${import.meta.env.BASE_URL}esrbcertified.png`}
+              alt=""
+              className="h-25 w-20"
+            />
           </a>
         </div>
       </div>
@@ -373,10 +377,11 @@ const Footer = () => {
           <a href="https://www.nintendo.com/us/terms-of-use/">Terms of Use</a>
           <div className="flex items-center space-x-2 ml-2 cursor-pointer">
             <img
-              src="/united-states-flag-icon.svg"
+              src={`${import.meta.env.BASE_URL}united-states-flag-icon.svg`}
               alt="US Flag"
               className="h-4"
             />
+
             <span className="font-semibold border-b-2 border-transparent hover:border-white transition-all duration-200">
               English (United States)
             </span>

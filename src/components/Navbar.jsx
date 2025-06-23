@@ -11,7 +11,11 @@ function Navbar() {
         href="https://www.nintendo.com/us/"
         className="bg-red-600 p-3 cursor-pointer"
       >
-        <img src="/logo.png" alt="Nintendo" className="h-7" />
+        <img
+          src={`${import.meta.env.BASE_URL}logo.png`}
+          alt="Nintendo"
+          className="h-7"
+        />
       </a>
 
       {/* Middle section - Navigation links */}
@@ -51,7 +55,11 @@ function Navbar() {
               className="flex items-center text-[#484848] hover:text-[#E60012] font-bold text-sm"
             >
               <span className="mr-1 text-[#E60012] text-lg font-bold">
-                <img src="/8109.png" alt="shopping bag" className="w-[16px]" />
+                <img
+                  src={`${import.meta.env.BASE_URL}8109.png`}
+                  alt="shopping bag"
+                  className="w-[16px]"
+                />
               </span>
               Shop
             </a>
@@ -96,7 +104,9 @@ function Navbar() {
         >
           <img
             src={
-              isHovered ? "/red magnifying glass.png" : "/magnifying glass.png"
+              isHovered
+                ? `${import.meta.env.BASE_URL}red magnifying glass.png`
+                : `${import.meta.env.BASE_URL}magnifying glass.png`
             }
             alt="search"
             className="w-[22px] h-[22px] inline-block mr-2"
@@ -125,14 +135,14 @@ function Navbar() {
         >
           <div className="relative w-[18px] h-[18px]">
             <img
-              src="/cart-black.png"
+              src={`${import.meta.env.BASE_URL}cart-black.png`}
               alt="shopping cart black"
               className={`absolute top-0 left-0 w-[18px] h-[18px] transition-opacity duration-300 ease-in-out ${
                 isCartHovered ? "opacity-0" : "opacity-100"
               }`}
             />
             <img
-              src="/cart-red.png"
+              src={`${import.meta.env.BASE_URL}cart-red.png`}
               alt="shopping cart red"
               className={`absolute top-0 left-0 w-[18px] h-[18px] transition-opacity duration-300 ease-in-out ${
                 isCartHovered ? "opacity-100" : "opacity-0"
@@ -143,7 +153,7 @@ function Navbar() {
         <button className="flex items-center bg-white text-[#E60012] px-4 py-1 rounded-full font-bold border border-[#E60012] cursor-pointer text-sm">
           <span className="mr-2">
             <img
-              src="/user.png"
+              src={`${import.meta.env.BASE_URL}user.png`}
               alt="user icon"
               className="w-[18px] h-[18px]"
             />
@@ -152,7 +162,7 @@ function Navbar() {
         </button>
         <a href="https://www.nintendo.com/us/region-selector/">
           <img
-            src="/united-states-flag-icon.svg"
+            src={`${import.meta.env.BASE_URL}united-states-flag-icon.svg`}
             alt="USA"
             className="h-6 w-6"
           />
